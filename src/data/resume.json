@@ -1,0 +1,140 @@
+{
+  "personal": {
+    "name": "Alexeis Vladimir Carrillo Pinaya",
+    "title": "AI & LLM Solutions Developer",
+    "location": "La Paz, Bolivia",
+    "email": "alexeis.carrillo@gmail.com",
+    "summary": "Desarrollador de software con más de 10 años de experiencia en arquitecturas modernas. Especializado en integración de IA generativa con LLMs locales (Ollama, Llama.cpp, LM Studio), automatización inteligente y soluciones de IA on-premise. Passion por construir productos inteligentes con privacidad de datos."
+  },
+  "experience": [
+    {
+      "id": 1,
+      "role": "AI Solutions Developer",
+      "company": "Yvaganet",
+      "period": "Mar 2024 – Presente",
+      "description": [
+        "Integración de LLMs locales para automatización",
+        "Desarrollo de asistentes IA privados",
+        "Arquitectura de microservicios con IA"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Profesional Control Interno, Profesional en Desarrollo de Software",
+      "company": "RUAT",
+      "period": "Mar 2021 – Ene 2026",
+      "description": [
+        "Investigación e innovación tecnológica",
+        "Desarrollo móvil y web con IA",
+        "Arquitectura de software",
+        "Scrum Master & liderazgo técnico"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Analista Codificador de Software",
+      "company": "RUAT",
+      "period": "Abr 2015 – Mar 2021",
+      "description": [
+        "Desarrollo web con Java, PrimeFaces",
+        "APIs y apps móviles con Ionic"
+      ]
+    },
+    {
+      "id": 4,
+      "role": "Docente / Instructor",
+      "company": "COGNOS & Universidad Privada de Bolivia",
+      "period": "2018 – 2020",
+      "description": [
+        "Cursos de Angular, NodeJS, MongoDB, JavaScript"
+      ]
+    },
+    {
+      "id": 5,
+      "role": "Full Stack Developer",
+      "company": "Banco de Crédito de Bolivia",
+      "period": "May 2014 – Abr 2015",
+      "description": [
+        "Desarrollo de apps Android",
+        "Sistemas internos",
+        "Proyecto de innovación de pagos por contacto"
+      ]
+    },
+    {
+      "id": 6,
+      "role": "Full Stack Developer",
+      "company": "CREMINEX S.R.L., MC4 S.R.L., BAP S.R.L., KUBO S.R.L.",
+      "period": "2012 – 2009",
+      "description": [
+        "Desarrollo web y servicios con Java, ASP.NET, PHP",
+        "Bases de datos y mantenimiento"
+      ]
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript", "TypeScript", "Java", "Python", ".Net", "Dart"],
+    "frameworks": ["Node.js", "NestJS", "Angular", "Spring Boot", "Ionic", "Flutter/Dart"],
+    "devops": ["Docker", "Kubernetes", "Jenkins"],
+    "ai_llm": ["Ollama", "Llama.cpp", "LM Studio", "RAG", "Embeddings", "Vector DB", "LangChain", "CrewAI"],
+    "ai_automation": ["Automatización con IA", "Asistentes IA privados", "Procesamiento de lenguaje natural", "Chatbots inteligentes", "Power BI & Analytics"],
+    "softSkills": ["Liderazgo", "Investigación", "Autodidacta", "Arquitectura de soluciones"]
+  },
+  "education": {
+    "degree": "Ingeniería de Sistemas",
+    "institution": "Escuela Militar de Ingeniería (EMI)",
+    "period": "2006–2013",
+    "courses": [
+      "Desarrollo Android",
+      "IA & Machine Learning",
+      "LLMs y Arquitectura de Embeddings"
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Asistentes IA Privados",
+      "type": "AI Project",
+      "description": "Implementación de LLMs locales para automatización empresarial",
+      "tags": ["Ollama", "RAG", "On-premise"]
+    },
+    {
+      "id": 2,
+      "name": "Yvaganet",
+      "type": "Emprendimiento",
+      "description": "Cofundador de startup social",
+      "tags": ["Social Tech", "IA"]
+    },
+    {
+      "id": 3,
+      "name": "Automatización Inteligente",
+      "type": "AI Project",
+      "description": "Sistemas de automatización con IA generativa",
+      "tags": ["LangChain", "Workflows"]
+    },
+    {
+      "id": 4,
+      "name": "GetPet",
+      "type": "Proyecto",
+      "description": "Plataforma para adopción y cuidado de mascotas",
+      "tags": ["Mobile", "Social"]
+    },
+    {
+      "id": 5,
+      "name": "Jump In Help",
+      "type": "Proyecto",
+      "description": "Plataforma de asistencia y ayuda comunitaria",
+      "tags": ["Social", "Mobile"]
+    },
+    {
+      "id": 6,
+      "name": "Consultorías IA",
+      "type": "Servicios",
+      "description": "Consultorías para integración de LLMs locales",
+      "tags": ["IA Privada", "Arquitectura"]
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/alexeis-vladimir-carrillo-pinaya",
+    "github": "https://github.com/4l3x31s"
+  }
+}
