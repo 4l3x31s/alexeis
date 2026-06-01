@@ -1,136 +1,195 @@
 {
   "personal": {
     "name": "Alexeis Vladimir Carrillo Pinaya",
-    "title": "AI & LLM Solutions Developer",
+    "title": "Software Architect & Senior Full-Stack Developer",
+    "tagline": "Arquitecturas event-driven a escala (gRPC · MQTT · Kafka) con un edge en IA on-premise.",
     "location": "La Paz, Bolivia",
     "email": "alexeis.carrillo@gmail.com",
-    "summary": "Desarrollador de software con más de 10 años de experiencia en arquitecturas modernas. Especializado en integración de IA generativa con LLMs locales (Ollama, Llama.cpp, LM Studio), automatización inteligente y soluciones de IA on-premise. Passion por construir productos inteligentes con privacidad de datos."
+    "phone": "+591 68047892",
+    "initials": "AC",
+    "available": true,
+    "availableText": "Disponible para nuevos proyectos",
+    "summary": "Ingeniero de Sistemas, desarrollador y arquitecto de soluciones con más de 15 años construyendo software. Trabajo en la intersección entre un backend sólido (NestJS, Quarkus, Kubernetes) y la integración de IA en entornos reales: diseño sistemas escalables y orientados a eventos, creo agentes inteligentes con LLMs y automatizo procesos complejos con una mentalidad centrada en el usuario, los datos y el valor estratégico. Desde dashboards en Power BI hasta arquitecturas híbridas seguras para banca y gobierno, me apasiona resolver problemas grandes con soluciones elegantes. Siempre en beta: aprendiendo, conectando y creando.",
+    "stats": [
+      { "value": "15+", "label": "Años de experiencia" },
+      { "value": "8+", "label": "Empresas e instituciones" },
+      { "value": "3", "label": "Sistemas de gobierno a escala" },
+      { "value": "5+", "label": "Productos en producción" }
+    ]
   },
+  "highlights": [
+    {
+      "icon": "network",
+      "title": "Arquitectura distribuida",
+      "description": "Diseño de microservicios orientados a eventos con gRPC, MQTT y Kafka para sistemas de alta concurrencia.",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "icon": "users",
+      "title": "Liderazgo técnico",
+      "description": "Scrum Master y referente de arquitectura: defino estándares, mentoreo equipos y conduzco decisiones de extremo a extremo.",
+      "color": "from-indigo-500 to-blue-600"
+    },
+    {
+      "icon": "brain",
+      "title": "IA on-premise",
+      "description": "Integración de LLMs locales (Ollama, Llama.cpp) con RAG y embeddings para automatización sin exponer datos sensibles.",
+      "color": "from-violet-500 to-purple-600"
+    }
+  ],
   "experience": [
     {
       "id": 1,
-      "role": "AI Solutions Developer",
-      "company": "Yvaganet",
-      "period": "Mar 2024 – Presente",
+      "role": "Profesional en Desarrollo de Software",
+      "company": "RUAT (Registro Único para la Administración Tributaria)",
+      "period": "Mar 2023 – Ene 2026",
       "description": [
-        "Integración de LLMs locales para automatización",
-        "Desarrollo de asistentes IA privados",
-        "Arquitectura de microservicios con IA"
-      ]
+        "Diseño e implementación de microservicios orientados a eventos con gRPC y MQTT",
+        "Arquitectura de backend y frontend de sistemas tributarios a escala nacional",
+        "Desarrollo de aplicaciones móviles híbridas y migraciones tecnológicas",
+        "Funciones de Scrum Master y facilitador ágil"
+      ],
+      "stack": ["NestJS", "Spring Boot", "gRPC", "MQTT", "Kafka", "Angular", "Docker", "Kubernetes"]
     },
     {
       "id": 2,
-      "role": "Profesional Control Interno, Profesional en Desarrollo de Software",
+      "role": "Profesional Control Interno",
       "company": "RUAT",
-      "period": "Mar 2021 – Ene 2026",
+      "period": "Mar 2021 – Mar 2023",
       "description": [
-        "Investigación e innovación tecnológica",
-        "Desarrollo móvil y web con IA",
-        "Arquitectura de software",
-        "Scrum Master & liderazgo técnico"
-      ]
+        "Investigación e innovación tecnológica para el sistema tributario",
+        "Desarrollo híbrido y tareas de arquitectura de software"
+      ],
+      "stack": ["Angular", "NodeJS", "Ionic", "PostgreSQL"]
     },
     {
       "id": 3,
-      "role": "Analista Codificador de Software",
+      "role": "Senior Software Development Manager",
       "company": "RUAT",
       "period": "Abr 2015 – Mar 2021",
       "description": [
-        "Desarrollo web con Java, PrimeFaces",
-        "APIs y apps móviles con Ionic"
-      ]
+        "Liderazgo del desarrollo de aplicaciones del sistema tributario",
+        "Desarrollo de aplicaciones web con Java y PrimeFaces, y servicios web",
+        "Desarrollo móvil con Ionic para componentes del sistema"
+      ],
+      "stack": ["Java", "PrimeFaces", "Ionic", "Oracle", "PostgreSQL"]
     },
     {
       "id": 4,
       "role": "Docente / Instructor",
-      "company": "COGNOS & Universidad Privada de Bolivia",
+      "company": "COGNOS & Universidad Privada de Bolivia (UPB)",
       "period": "2018 – 2020",
       "description": [
-        "Cursos de Angular, NodeJS, MongoDB, JavaScript"
-      ]
+        "Instructor de Angular, NodeJS y MongoDB en COGNOS",
+        "Docente universitario de JavaScript, Angular, MongoDB y NodeJS en la UPB"
+      ],
+      "stack": ["Angular", "NodeJS", "MongoDB", "JavaScript"]
     },
     {
       "id": 5,
       "role": "Full Stack Developer",
-      "company": "Banco de Crédito de Bolivia",
+      "company": "Banco de Crédito de Bolivia (BCP)",
       "period": "May 2014 – Abr 2015",
       "description": [
-        "Desarrollo de apps Android",
-        "Sistemas internos",
-        "Proyecto de innovación de pagos por contacto"
-      ]
+        "Desarrollo de aplicaciones móviles Android para banca",
+        "Soluciones de pagos por contacto y cumplimiento de normativas (FATCA)"
+      ],
+      "stack": ["Android", "Java", "SQL Server"]
     },
     {
       "id": 6,
       "role": "Full Stack Developer",
-      "company": "CREMINEX S.R.L., MC4 S.R.L., BAP S.R.L., KUBO S.R.L.",
-      "period": "2012 – 2009",
+      "company": "CREMINEX · MC4 · BAP · KUBO S.R.L.",
+      "period": "2008 – 2014",
       "description": [
-        "Desarrollo web y servicios con Java, ASP.NET, PHP",
-        "Bases de datos y mantenimiento"
-      ]
+        "Consultoría para banca y desarrollo móvil Android (agentes de banca móvil)",
+        "Desarrollo web con ASP.NET, Java/IceFaces y PHP",
+        "Procedimientos almacenados y automatización para dispositivos"
+      ],
+      "stack": ["ASP.NET", "C#", "Java", "PHP", "PostgreSQL"]
     }
   ],
   "skills": {
-    "languages": ["JavaScript", "TypeScript", "Java", "Python", ".Net", "Dart"],
-    "frameworks": ["Node.js", "NestJS", "Angular", "Spring Boot", "Ionic", "Flutter/Dart"],
-    "devops": ["Docker", "Kubernetes", "Jenkins"],
-    "ai_llm": ["Ollama", "Llama.cpp", "LM Studio", "RAG", "Embeddings", "Vector DB", "LangChain", "CrewAI"],
-    "ai_automation": ["Automatización con IA", "Asistentes IA privados", "Procesamiento de lenguaje natural", "Chatbots inteligentes", "Power BI & Analytics"],
-    "softSkills": ["Liderazgo", "Investigación", "Autodidacta", "Arquitectura de soluciones"]
+    "architecture": ["Microservicios", "Event-Driven", "gRPC", "MQTT", "Kafka", "NestJS", "Spring Boot", "Quarkus", "Diseño escalable"],
+    "frontend": ["Angular", "Next.js", "React", "TypeScript", "JavaScript"],
+    "mobile": ["Flutter / Dart", "Ionic", "Android"],
+    "devops": ["Docker", "Kubernetes", "Jenkins", "CI/CD"],
+    "ai_llm": ["Agentes inteligentes", "LLMs locales", "Ollama", "Llama.cpp", "LM Studio", "RAG", "Embeddings", "LangChain", "Fine-tuning LLM", "Machine Learning"],
+    "data": ["PostgreSQL", "MongoDB", "SQL Server", "Oracle", "Power BI", "Python / Analítica"]
   },
+  "softSkills": ["Liderazgo de equipos", "Visión estratégica", "Scrum Master", "Autodidacta", "Investigación e innovación"],
   "education": {
     "degree": "Ingeniería de Sistemas",
     "institution": "Escuela Militar de Ingeniería (EMI)",
-    "period": "2006–2013",
+    "period": "2013",
+    "ongoing": "Maestría en Inteligencia Artificial (en curso)",
     "courses": [
-      "Desarrollo Android",
-      "IA & Machine Learning",
-      "LLMs y Arquitectura de Embeddings"
+      "SOLID & Clean Code (devtalles)",
+      "NestJS: backend escalable y reportes (Udemy)",
+      "Flutter para iOS y Android (Udemy)",
+      "Docker de principiante a experto (Udemy)",
+      "Jenkins de cero a experto (Udemy)"
     ]
   },
+  "languages": [
+    { "name": "Español", "level": "Nativo", "pct": 100 },
+    { "name": "Inglés", "level": "Intermedio", "pct": 65 },
+    { "name": "Aymara", "level": "Intermedio", "pct": 65 }
+  ],
   "projects": [
     {
       "id": 1,
-      "name": "Asistentes IA Privados",
-      "type": "AI Project",
-      "description": "Implementación de LLMs locales para automatización empresarial",
-      "tags": ["Ollama", "RAG", "On-premise"]
+      "name": "Tu Municipio 24/7",
+      "type": "government",
+      "featured": true,
+      "description": "Plataforma del Registro Único para la Administración Tributaria para consultar deudas y pagos municipales por QR bancario. Arquitectura orientada a eventos con gRPC y MQTT.",
+      "tags": ["gRPC", "MQTT", "Microservicios", "NestJS"],
+      "links": {}
     },
     {
       "id": 2,
-      "name": "Yvaganet",
-      "type": "Emprendimiento",
-      "description": "Cofundador de startup social",
-      "tags": ["Social Tech", "IA"]
+      "name": "Sistema de Información Administrativa (SIA)",
+      "type": "government",
+      "featured": true,
+      "description": "Sistema de RR.HH. para control de personal, vacaciones y registros, comunicado vía gRPC entre servicios.",
+      "tags": ["gRPC", "Backend", "PostgreSQL"],
+      "links": {}
     },
     {
       "id": 3,
-      "name": "Automatización Inteligente",
-      "type": "AI Project",
-      "description": "Sistemas de automatización con IA generativa",
-      "tags": ["LangChain", "Workflows"]
+      "name": "Ecosistema Microservicios + Kafka",
+      "type": "opensource",
+      "featured": true,
+      "description": "Ecosistema de microservicios con Spring Boot, Kafka, Avro y Schema Registry, con librería compartida y notificaciones por email.",
+      "tags": ["Spring Boot", "Kafka", "Avro", "Event-Driven"],
+      "links": { "github": "https://github.com/4l3x31s/ecosistema-microservicios-kafka" }
     },
     {
       "id": 4,
-      "name": "GetPet",
-      "type": "Proyecto",
-      "description": "Plataforma para adopción y cuidado de mascotas",
-      "tags": ["Mobile", "Social"]
+      "name": "Oficina Virtual",
+      "type": "mobile",
+      "featured": false,
+      "description": "Aplicación móvil para realizar trámites y validar documentos de forma remota.",
+      "tags": ["Ionic", "Móvil", "APIs"],
+      "links": {}
     },
     {
       "id": 5,
-      "name": "Jump In Help",
-      "type": "Proyecto",
-      "description": "Plataforma de asistencia y ayuda comunitaria",
-      "tags": ["Social", "Mobile"]
+      "name": "Ollama Client MCP",
+      "type": "opensource",
+      "featured": false,
+      "description": "Cliente para Ollama implementado como servidor MCP, para integrar modelos de lenguaje locales en flujos de trabajo.",
+      "tags": ["Ollama", "MCP", "TypeScript", "LLM"],
+      "links": { "github": "https://github.com/4l3x31s/ollama-client-mcp" }
     },
     {
       "id": 6,
-      "name": "Consultorías IA",
-      "type": "Servicios",
-      "description": "Consultorías para integración de LLMs locales",
-      "tags": ["IA Privada", "Arquitectura"]
+      "name": "GetPet",
+      "type": "startup",
+      "featured": false,
+      "description": "Plataforma para encontrar mascotas perdidas combinando publicación y escaneo de códigos QR.",
+      "tags": ["Móvil", "QR", "Social"],
+      "links": {}
     }
   ],
   "social": {

@@ -1,88 +1,12 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, ArrowDown, Download, Sparkles, Brain } from 'lucide-react';
-import resumeData from '../data/resume.json';
+import { MapPin, ArrowDown, Github, FolderGit2 } from 'lucide-react';
+import { useContent } from '../hooks/useContent';
+import DownloadCVButton from './DownloadCVButton';
+import foto from '../assets/foto.jpeg';
 
 export default function Hero() {
-  const { personal } = resumeData;
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const handleDownloadCV = async () => {
-    if (isGenerating) return;
-    
-    console.log('Descargando CV...');
-    const element = document.getElementById('resume-content');
-    if (element) {
-      setIsGenerating(true);
-      console.log('Generando PDF...');
-      
-      try {
-        const html2pdf = (await import('html2pdf.js')).default;
-        
-        const opt = {
-          margin: 10,
-          filename: 'Alexeis_Carrillo_CV.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { 
-            scale: 2,
-            useCORS: true,
-            logging: false,
-            backgroundColor: '#ffffff',
-            onclone: (doc, clonedElement) => {
-              while (doc.head.firstChild) {
-                doc.head.removeChild(doc.head.firstChild);
-              }
-              
-              const style = doc.createElement('style');
-              style.textContent = `
-                * { 
-                  background-color: transparent !important; 
-                  color: #1a1a1a !important; 
-                  border-color: #e2e8f0 !important;
-                }
-                [id="resume-content"] {
-                  padding: 40px !important;
-                  background: white !important;
-                  color: #1a1a1a !important;
-                  font-family: system-ui, -apple-system, sans-serif !important;
-                }
-                h1, h2, h3, h4, h5, h6 {
-                  color: #0f172a !important;
-                  font-weight: 600 !important;
-                }
-                p, span, div {
-                  color: #475569 !important;
-                }
-                a {
-                  color: #2563eb !important;
-                }
-                strong {
-                  color: #0f172a !important;
-                }
-                ul, ol {
-                  color: #475569 !important;
-                }
-                li {
-                  color: #475569 !important;
-                }
-              `;
-              doc.head.appendChild(style);
-              
-              clonedElement.setAttribute('data-pdf', 'true');
-            }
-          },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-        
-        await html2pdf().set(opt).from(element).save();
-        console.log('PDF descargado');
-      } catch (error) {
-        console.error('Error al generar PDF:', error);
-      } finally {
-        setIsGenerating(false);
-      }
-    }
-  };
+  const { data, t } = useContent();
+  const { personal, social } = data;
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
@@ -93,11 +17,11 @@ export default function Hero() {
         backgroundSize: '40px 40px',
         opacity: 0.3
       }} />
-      
+
       {/* Animated orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      
+
       <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -105,57 +29,81 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-center lg:text-left"
         >
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-6"
-          >
-            <Brain size={16} />
-            <span>AI & LLM Solutions Developer</span>
-          </motion.div>
-          
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-6">
+            {personal.available && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.15 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium"
+              >
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                </span>
+                <span>{personal.availableText}</span>
+              </motion.div>
+            )}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium"
+            >
+              <FolderGit2 size={16} />
+              <span>{personal.title}</span>
+            </motion.div>
+          </div>
+
           <h1 className="text-5xl lg:text-7xl font-bold mb-4 leading-tight">
-            <span className="text-slate-800 dark:text-white">Hola, soy </span>
+            <span className="text-slate-800 dark:text-white">{t.hero.greeting} </span>
             <br />
             <span className="text-gradient">{personal.name.split(' ')[0]}</span>
           </h1>
-          
-          <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-300 mb-6 font-light">
-            {personal.title}
+
+          <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-300 mb-8 font-light max-w-xl">
+            {personal.tagline}
           </p>
-          
+
           <div className="flex items-center justify-center lg:justify-start gap-2 text-slate-500 dark:text-slate-400 mb-8">
             <MapPin size={18} />
             <span>{personal.location}</span>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a 
-              href="#skills" 
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-xl hover:shadow-violet-500/25"
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white font-semibold transition-all hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
             >
-              <Sparkles size={20} />
-              Ver Habilidades IA
+              <FolderGit2 size={20} />
+              {t.hero.viewProjects}
             </a>
-            <button 
-              onClick={handleDownloadCV}
-              disabled={isGenerating}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 dark:border-slate-600 hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            <DownloadCVButton />
+            <a
+              href={social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl border-2 border-slate-300 dark:border-slate-600 hover:border-slate-800 dark:hover:border-white transition-all"
             >
-              {isGenerating ? (
-                <>
-                  <span className="animate-spin">⟳</span>
-                  Generando...
-                </>
-              ) : (
-                <>
-                  <Download size={20} />
-                  Descargar CV
-                </>
-              )}
-            </button>
+              <Github size={20} />
+            </a>
           </div>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 max-w-xl"
+          >
+            {personal.stats.map((stat) => (
+              <div key={stat.label} className="text-center lg:text-left">
+                <div className="text-3xl font-bold text-gradient">{stat.value}</div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
 
         <motion.div
@@ -167,31 +115,30 @@ export default function Hero() {
           <div className="relative">
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-violet-600 to-blue-600 rounded-3xl blur-2xl opacity-30 animate-pulse-glow" />
-            
+
             {/* Avatar card */}
-            <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center glow animate-float">
-              <div className="text-center">
-                <span className="text-7xl lg:text-9xl font-bold text-white/90">
-                  {personal.name.split(' ').map(n => n[0]).join('')}
-                </span>
-                <p className="text-white/80 mt-4 font-medium">AI Developer</p>
-              </div>
+            <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-3xl bg-gradient-to-br from-blue-600 to-violet-600 p-1.5 glow animate-float">
+              <img
+                src={foto}
+                alt={personal.name}
+                className="w-full h-full object-cover rounded-3xl"
+              />
             </div>
-            
+
             {/* Floating badges */}
-            <motion.div 
+            <motion.div
               className="absolute -top-4 -right-4 px-4 py-2 rounded-xl glass shadow-lg"
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 3 }}
             >
-              <span className="text-sm font-semibold text-violet-600 dark:text-violet-400">🤖 LLMs</span>
+              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">⚙️ Event-Driven</span>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="absolute -bottom-4 -left-4 px-4 py-2 rounded-xl glass shadow-lg"
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 3, delay: 1.5 }}
             >
-              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">🔒 On-Premise</span>
+              <span className="text-sm font-semibold text-violet-600 dark:text-violet-400">🤖 IA on-premise</span>
             </motion.div>
           </div>
         </motion.div>

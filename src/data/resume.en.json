@@ -1,0 +1,199 @@
+{
+  "personal": {
+    "name": "Alexeis Vladimir Carrillo Pinaya",
+    "title": "Software Architect & Senior Full-Stack Developer",
+    "tagline": "Event-driven architectures at scale (gRPC · MQTT · Kafka) with an edge in on-premise AI.",
+    "location": "La Paz, Bolivia",
+    "email": "alexeis.carrillo@gmail.com",
+    "phone": "+591 68047892",
+    "initials": "AC",
+    "available": true,
+    "availableText": "Available for new projects",
+    "summary": "Systems Engineer, developer and solutions architect with over 15 years building software. I work at the intersection of solid backend engineering (NestJS, Quarkus, Kubernetes) and real-world AI integration: I design scalable, event-driven systems, build intelligent agents with LLMs, and automate complex processes with a mindset focused on the user, the data and strategic value. From Power BI dashboards to secure hybrid architectures for banking and government, I love solving big problems with elegant solutions. Always in beta: learning, connecting and building.",
+    "stats": [
+      { "value": "15+", "label": "Years of experience" },
+      { "value": "8+", "label": "Companies & institutions" },
+      { "value": "3", "label": "Government systems at scale" },
+      { "value": "5+", "label": "Products in production" }
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "network",
+      "title": "Distributed architecture",
+      "description": "Design of event-driven microservices with gRPC, MQTT and Kafka for high-concurrency systems.",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "icon": "users",
+      "title": "Technical leadership",
+      "description": "Scrum Master and architecture reference: I set standards, mentor teams and drive end-to-end decisions.",
+      "color": "from-indigo-500 to-blue-600"
+    },
+    {
+      "icon": "brain",
+      "title": "On-premise AI",
+      "description": "Integration of local LLMs (Ollama, Llama.cpp) with RAG and embeddings for automation without exposing sensitive data.",
+      "color": "from-violet-500 to-purple-600"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Software Development Professional",
+      "company": "RUAT (Bolivian Tax Administration Registry)",
+      "period": "Mar 2023 – Jan 2026",
+      "description": [
+        "Design and implementation of event-driven microservices with gRPC and MQTT",
+        "Backend and frontend architecture of nationwide tax systems",
+        "Development of hybrid mobile applications and technology migrations",
+        "Scrum Master and agile facilitator duties"
+      ],
+      "stack": ["NestJS", "Spring Boot", "gRPC", "MQTT", "Kafka", "Angular", "Docker", "Kubernetes"]
+    },
+    {
+      "id": 2,
+      "role": "Internal Control Professional",
+      "company": "RUAT",
+      "period": "Mar 2021 – Mar 2023",
+      "description": [
+        "Technology research and innovation for the tax system",
+        "Hybrid development and software architecture tasks"
+      ],
+      "stack": ["Angular", "NodeJS", "Ionic", "PostgreSQL"]
+    },
+    {
+      "id": 3,
+      "role": "Senior Software Development Manager",
+      "company": "RUAT",
+      "period": "Apr 2015 – Mar 2021",
+      "description": [
+        "Led the development of the tax system's applications",
+        "Web application development with Java and PrimeFaces, plus web services",
+        "Mobile development with Ionic for system components"
+      ],
+      "stack": ["Java", "PrimeFaces", "Ionic", "Oracle", "PostgreSQL"]
+    },
+    {
+      "id": 4,
+      "role": "Lecturer / Instructor",
+      "company": "COGNOS & Private University of Bolivia (UPB)",
+      "period": "2018 – 2020",
+      "description": [
+        "Instructor of Angular, NodeJS and MongoDB at COGNOS",
+        "University lecturer in JavaScript, Angular, MongoDB and NodeJS at UPB"
+      ],
+      "stack": ["Angular", "NodeJS", "MongoDB", "JavaScript"]
+    },
+    {
+      "id": 5,
+      "role": "Full Stack Developer",
+      "company": "Banco de Crédito de Bolivia (BCP)",
+      "period": "May 2014 – Apr 2015",
+      "description": [
+        "Development of Android mobile applications for banking",
+        "Contactless payment solutions and regulatory compliance (FATCA)"
+      ],
+      "stack": ["Android", "Java", "SQL Server"]
+    },
+    {
+      "id": 6,
+      "role": "Full Stack Developer",
+      "company": "CREMINEX · MC4 · BAP · KUBO S.R.L.",
+      "period": "2008 – 2014",
+      "description": [
+        "Banking consulting and Android mobile development (mobile banking agents)",
+        "Web development with ASP.NET, Java/IceFaces and PHP",
+        "Stored procedures and device automation"
+      ],
+      "stack": ["ASP.NET", "C#", "Java", "PHP", "PostgreSQL"]
+    }
+  ],
+  "skills": {
+    "architecture": ["Microservices", "Event-Driven", "gRPC", "MQTT", "Kafka", "NestJS", "Spring Boot", "Quarkus", "Scalable design"],
+    "frontend": ["Angular", "Next.js", "React", "TypeScript", "JavaScript"],
+    "mobile": ["Flutter / Dart", "Ionic", "Android"],
+    "devops": ["Docker", "Kubernetes", "Jenkins", "CI/CD"],
+    "ai_llm": ["Intelligent agents", "Local LLMs", "Ollama", "Llama.cpp", "LM Studio", "RAG", "Embeddings", "LangChain", "LLM Fine-tuning", "Machine Learning"],
+    "data": ["PostgreSQL", "MongoDB", "SQL Server", "Oracle", "Power BI", "Python / Analytics"]
+  },
+  "softSkills": ["Team leadership", "Strategic vision", "Scrum Master", "Self-taught", "Research & innovation"],
+  "education": {
+    "degree": "Systems Engineering",
+    "institution": "Military School of Engineering (EMI)",
+    "period": "2013",
+    "ongoing": "Master's in Artificial Intelligence (in progress)",
+    "courses": [
+      "SOLID & Clean Code (devtalles)",
+      "NestJS: scalable backend & reports (Udemy)",
+      "Flutter for iOS and Android (Udemy)",
+      "Docker from beginner to expert (Udemy)",
+      "Jenkins from zero to expert (Udemy)"
+    ]
+  },
+  "languages": [
+    { "name": "Spanish", "level": "Native", "pct": 100 },
+    { "name": "English", "level": "Intermediate", "pct": 65 },
+    { "name": "Aymara", "level": "Intermediate", "pct": 65 }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Tu Municipio 24/7",
+      "type": "government",
+      "featured": true,
+      "description": "A Tax Administration Registry platform to check municipal debts and payments via bank QR. Event-driven architecture with gRPC and MQTT.",
+      "tags": ["gRPC", "MQTT", "Microservices", "NestJS"],
+      "links": {}
+    },
+    {
+      "id": 2,
+      "name": "Administrative Information System (SIA)",
+      "type": "government",
+      "featured": true,
+      "description": "An HR system for staff control, vacations and records, communicating between services via gRPC.",
+      "tags": ["gRPC", "Backend", "PostgreSQL"],
+      "links": {}
+    },
+    {
+      "id": 3,
+      "name": "Microservices + Kafka Ecosystem",
+      "type": "opensource",
+      "featured": true,
+      "description": "A microservices ecosystem with Spring Boot, Kafka, Avro and Schema Registry, with a shared library and email notifications.",
+      "tags": ["Spring Boot", "Kafka", "Avro", "Event-Driven"],
+      "links": { "github": "https://github.com/4l3x31s/ecosistema-microservicios-kafka" }
+    },
+    {
+      "id": 4,
+      "name": "Oficina Virtual",
+      "type": "mobile",
+      "featured": false,
+      "description": "Mobile app to carry out paperwork and validate documents remotely.",
+      "tags": ["Ionic", "Mobile", "APIs"],
+      "links": {}
+    },
+    {
+      "id": 5,
+      "name": "Ollama Client MCP",
+      "type": "opensource",
+      "featured": false,
+      "description": "An Ollama client implemented as an MCP server, to integrate local language models into workflows.",
+      "tags": ["Ollama", "MCP", "TypeScript", "LLM"],
+      "links": { "github": "https://github.com/4l3x31s/ollama-client-mcp" }
+    },
+    {
+      "id": 6,
+      "name": "GetPet",
+      "type": "startup",
+      "featured": false,
+      "description": "A platform to find lost pets combining publishing and QR code scanning.",
+      "tags": ["Mobile", "QR", "Social"],
+      "links": {}
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/alexeis-vladimir-carrillo-pinaya",
+    "github": "https://github.com/4l3x31s"
+  }
+}

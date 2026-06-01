@@ -1,8 +1,9 @@
-import { Github, Linkedin, Heart, Code2, Brain } from 'lucide-react';
-import resumeData from '../data/resume.json';
+import { Github, Linkedin, Heart, Brain } from 'lucide-react';
+import { useContent } from '../hooks/useContent';
 
 export default function Footer() {
-  const { personal, social } = resumeData;
+  const { data, t } = useContent();
+  const { personal, social } = data;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -46,7 +47,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
             <span>© {currentYear} {personal.name.split(' ')[0]}</span>
             <span className="flex items-center gap-1">
-              Hecho con <Heart size={14} className="text-red-500" /> y <Brain size={14} className="text-violet-500" />
+              {t.footer.madeWith} <Heart size={14} className="text-red-500" /> {t.footer.and} <Brain size={14} className="text-violet-500" />
             </span>
           </div>
         </div>

@@ -1,55 +1,57 @@
 import { motion } from 'framer-motion';
-import { 
-  Code2, 
-  Wrench, 
-  Cloud, 
-  Brain, 
-  Users,
-  Cpu,
-  Sparkles
+import {
+  Network,
+  Layout,
+  Smartphone,
+  Cloud,
+  Brain,
+  Database
 } from 'lucide-react';
-import resumeData from '../data/resume.json';
+import { useContent } from '../hooks/useContent';
 
 export default function Skills() {
-  const { skills } = resumeData;
+  const { data, t } = useContent();
+  const { skills } = data;
+  const cat = t.skills.categories;
 
   const categories = [
     {
-      title: 'LLMs & IA Local',
-      icon: <Sparkles size={24} />,
-      skills: skills.ai_llm,
-      colors: 'from-violet-500 to-purple-600',
+      title: cat.architecture,
+      icon: <Network size={24} />,
+      skills: skills.architecture,
+      colors: 'from-blue-500 to-cyan-500',
       highlight: true
     },
     {
-      title: 'Lenguajes',
-      icon: <Code2 size={24} />,
-      skills: skills.languages,
-      colors: 'from-orange-500 to-red-500'
+      title: cat.frontend,
+      icon: <Layout size={24} />,
+      skills: skills.frontend,
+      colors: 'from-indigo-500 to-blue-500'
     },
     {
-      title: 'Frameworks & Tools',
-      icon: <Wrench size={24} />,
-      skills: skills.frameworks,
-      colors: 'from-blue-500 to-cyan-500'
+      title: cat.mobile,
+      icon: <Smartphone size={24} />,
+      skills: skills.mobile,
+      colors: 'from-sky-500 to-cyan-500'
     },
     {
-      title: 'DevOps & Infra',
+      title: cat.devops,
       icon: <Cloud size={24} />,
       skills: skills.devops,
       colors: 'from-slate-500 to-zinc-500'
     },
     {
-      title: 'AI Automatización',
+      title: cat.ai_llm,
       icon: <Brain size={24} />,
-      skills: skills.ai_automation,
-      colors: 'from-emerald-500 to-teal-500'
+      skills: skills.ai_llm,
+      colors: 'from-violet-500 to-purple-600',
+      highlight: true
     },
     {
-      title: 'Soft Skills',
-      icon: <Users size={24} />,
-      skills: skills.softSkills,
-      colors: 'from-rose-500 to-pink-500'
+      title: cat.data,
+      icon: <Database size={24} />,
+      skills: skills.data,
+      colors: 'from-emerald-500 to-teal-500'
     }
   ];
 
@@ -76,9 +78,8 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <span className="text-slate-800 dark:text-white">Habilidades </span>
-            <span className="text-blue-600 dark:text-blue-400">&</span>
-            <span className="text-violet-600 dark:text-violet-400"> IA</span>
+            <span className="text-slate-800 dark:text-white">{t.skills.title1}</span>
+            <span className="text-violet-600 dark:text-violet-400">{t.skills.title2}</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-violet-500 mx-auto rounded-full" />
         </motion.div>

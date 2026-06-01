@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { Calendar, Building2, ArrowRight } from 'lucide-react';
-import resumeData from '../data/resume.json';
+import { useContent } from '../hooks/useContent';
 
 export default function Experience() {
-  const { experience } = resumeData;
+  const { data, t } = useContent();
+  const { experience } = data;
 
   return (
     <section className="py-24" id="experience">
@@ -15,8 +16,8 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <span className="text-slate-800 dark:text-white">Experiencia </span>
-            <span className="text-blue-600 dark:text-blue-400">Laboral</span>
+            <span className="text-slate-800 dark:text-white">{t.experience.title1}</span>
+            <span className="text-blue-600 dark:text-blue-400">{t.experience.title2}</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-violet-500 mx-auto rounded-full" />
         </motion.div>
@@ -61,6 +62,18 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+                  {job.stack && (
+                    <div className={`mt-4 flex flex-wrap gap-2 ${index % 2 === 0 ? 'md:justify-end' : 'md:justify-start'}`}>
+                      {job.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2.5 py-1 rounded-md text-xs font-medium bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>

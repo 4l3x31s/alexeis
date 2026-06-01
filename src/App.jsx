@@ -1,4 +1,5 @@
 import { ThemeProvider } from './hooks/useTheme';
+import { LanguageProvider } from './hooks/useContent';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,11 +9,12 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ResumeContent from './components/ResumeContent';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
     <ThemeProvider>
+      <LanguageProvider>
       <div className="min-h-screen">
         <Navbar />
         <main>
@@ -25,10 +27,9 @@ function App() {
           <Contact />
         </main>
         <Footer />
-        <div className="hidden">
-          <ResumeContent />
-        </div>
+        <WhatsAppButton />
       </div>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

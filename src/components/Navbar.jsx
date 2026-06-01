@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Code2, Brain } from 'lucide-react';
+import { Menu, X, Sun, Moon, Brain } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
+import { useContent } from '../hooks/useContent';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+  const { t, toggleLang } = useContent();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#about', label: 'Sobre Mí' },
-    { href: '#experience', label: 'Experiencia' },
-    { href: '#skills', label: 'Habilidades' },
-    { href: '#projects', label: 'Proyectos' },
-    { href: '#education', label: 'Educación' },
-    { href: '#contact', label: 'Contacto' },
+    { href: '#about', label: t.nav.about },
+    { href: '#experience', label: t.nav.experience },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#projects', label: t.nav.projects },
+    { href: '#education', label: t.nav.education },
+    { href: '#contact', label: t.nav.contact },
   ];
 
   const handleNavClick = (e, href) => {
@@ -63,10 +65,18 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <button 
-            onClick={toggleTheme} 
+          <button
+            onClick={toggleLang}
+            className="px-3 py-2 rounded-full text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
+            aria-label={t.langLabel}
+          >
+            {t.langSwitch}
+          </button>
+
+          <button
+            onClick={toggleTheme}
             className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
-            aria-label="Cambiar tema"
+            aria-label={t.themeLabel}
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
