@@ -42,6 +42,7 @@ export const ui = {
         opensource: 'Open Source',
         mobile: 'Móvil',
         startup: 'Emprendimiento',
+        client: 'Cliente',
       },
     },
     education: {
@@ -51,8 +52,8 @@ export const ui = {
       courses: 'Cursos Relevantes',
       languages: 'Idiomas',
       inProgress: 'En curso',
-      masterTitle: 'Maestría en Inteligencia Artificial',
-      masterSubtitle: 'Formación avanzada en IA, Machine Learning y arquitectura de LLMs',
+      masterTitle: 'Maestría en Inteligencia Artificial, Machine Learning y Data Science (Versión II)',
+      masterSubtitle: 'Especialización aplicada a LLMs, agentes inteligentes y soluciones de datos',
     },
     contact: {
       title1: '¿Trabajamos ',
@@ -119,6 +120,7 @@ export const ui = {
         opensource: 'Open Source',
         mobile: 'Mobile',
         startup: 'Startup',
+        client: 'Client',
       },
     },
     education: {
@@ -128,8 +130,8 @@ export const ui = {
       courses: 'Relevant Courses',
       languages: 'Languages',
       inProgress: 'In progress',
-      masterTitle: "Master's in Artificial Intelligence",
-      masterSubtitle: 'Advanced training in AI, Machine Learning and LLM architecture',
+      masterTitle: "Master's in Artificial Intelligence, Machine Learning & Data Science (Version II)",
+      masterSubtitle: 'Specialization applied to LLMs, intelligent agents and data solutions',
     },
     contact: {
       title1: "Let's work ",

@@ -9,12 +9,12 @@
     "initials": "AC",
     "available": true,
     "availableText": "Disponible para nuevos proyectos",
-    "summary": "Ingeniero de Sistemas, desarrollador y arquitecto de soluciones con más de 15 años construyendo software. Trabajo en la intersección entre un backend sólido (NestJS, Quarkus, Kubernetes) y la integración de IA en entornos reales: diseño sistemas escalables y orientados a eventos, creo agentes inteligentes con LLMs y automatizo procesos complejos con una mentalidad centrada en el usuario, los datos y el valor estratégico. Desde dashboards en Power BI hasta arquitecturas híbridas seguras para banca y gobierno, me apasiona resolver problemas grandes con soluciones elegantes. Siempre en beta: aprendiendo, conectando y creando.",
+    "summary": "Ingeniero de Sistemas, desarrollador y arquitecto de soluciones con más de 15 años construyendo software. Trabajo en la intersección entre un backend sólido (NestJS, Quarkus, Kubernetes) y la integración de IA en entornos reales: diseño sistemas escalables y orientados a eventos, creo agentes inteligentes con LLMs y automatizo procesos complejos con una mentalidad centrada en el usuario, los datos y el valor estratégico. Desde dashboards en Power BI hasta arquitecturas híbridas seguras para banca y gobierno, me apasiona resolver problemas grandes con soluciones elegantes. Lidero equipos desde el servicio: pongo a las personas primero, fomento la innovación y construyo confianza. Siempre en beta: aprendiendo, conectando y creando.",
     "stats": [
       { "value": "15+", "label": "Años de experiencia" },
       { "value": "8+", "label": "Empresas e instituciones" },
-      { "value": "3", "label": "Sistemas de gobierno a escala" },
-      { "value": "5+", "label": "Productos en producción" }
+      { "value": "100k+", "label": "Descargas de Tu Municipio 24/7" },
+      { "value": "10+", "label": "Productos en producción" }
     ]
   },
   "highlights": [
@@ -26,8 +26,8 @@
     },
     {
       "icon": "users",
-      "title": "Liderazgo técnico",
-      "description": "Scrum Master y referente de arquitectura: defino estándares, mentoreo equipos y conduzco decisiones de extremo a extremo.",
+      "title": "Liderazgo de servicio",
+      "description": "Pongo al equipo primero: fomento la innovación, doy feedback constante y construyo confianza —incluso con perfiles difíciles—. Protejo y respaldo a mi gente, y eso se traduce en equipos leales que crecen y dan lo mejor.",
       "color": "from-indigo-500 to-blue-600"
     },
     {
@@ -38,6 +38,17 @@
     }
   ],
   "experience": [
+    {
+      "id": 7,
+      "role": "Software Architect / Tech Lead",
+      "company": "Independiente",
+      "period": "Ene 2026 – Presente",
+      "description": [
+        "Liderazgo del desarrollo de un sistema B2B de seguros de viaje para una importante empresa de turismo de Bolivia",
+        "Arquitectura y stack completo con NestJS y ReactJS, aplicando IA en el proceso de desarrollo"
+      ],
+      "stack": ["NestJS", "ReactJS", "IA"]
+    },
     {
       "id": 1,
       "role": "Profesional en Desarrollo de Software",
@@ -113,17 +124,18 @@
     "architecture": ["Microservicios", "Event-Driven", "gRPC", "MQTT", "Kafka", "NestJS", "Spring Boot", "Quarkus", "Diseño escalable"],
     "frontend": ["Angular", "Next.js", "React", "TypeScript", "JavaScript"],
     "mobile": ["Flutter / Dart", "Ionic", "Android"],
-    "devops": ["Docker", "Kubernetes", "Jenkins", "CI/CD"],
-    "ai_llm": ["Agentes inteligentes", "LLMs locales", "Ollama", "Llama.cpp", "LM Studio", "RAG", "Embeddings", "LangChain", "Fine-tuning LLM", "Machine Learning"],
+    "devops": ["Docker", "Kubernetes", "AWS (EC2)", "Jenkins", "CI/CD"],
+    "ai_llm": ["Claude Code (experto)", "MCP (Model Context Protocol)", "Desarrollo asistido por IA", "Agentes inteligentes", "LLMs locales", "Ollama", "Llama.cpp", "RAG", "Embeddings", "LangChain", "Fine-tuning LLM", "Machine Learning"],
     "data": ["PostgreSQL", "MongoDB", "SQL Server", "Oracle", "Power BI", "Python / Analítica"]
   },
-  "softSkills": ["Liderazgo de equipos", "Visión estratégica", "Scrum Master", "Autodidacta", "Investigación e innovación"],
+  "softSkills": ["Liderazgo de servicio", "Mentoría y feedback", "Visión estratégica", "Scrum Master", "Autodidacta", "Investigación e innovación"],
   "education": {
     "degree": "Ingeniería de Sistemas",
     "institution": "Escuela Militar de Ingeniería (EMI)",
     "period": "2013",
-    "ongoing": "Maestría en Inteligencia Artificial (en curso)",
+    "ongoing": "Maestría en Inteligencia Artificial, Machine Learning y Data Science (Versión II) — en curso",
     "courses": [
+      "Diplomado en Realidad Virtual e Inteligencia Artificial",
       "SOLID & Clean Code (devtalles)",
       "NestJS: backend escalable y reportes (Udemy)",
       "Flutter para iOS y Android (Udemy)",
@@ -138,12 +150,21 @@
   ],
   "projects": [
     {
+      "id": 9,
+      "name": "Sistema B2B — Seguros de Viaje",
+      "type": "client",
+      "featured": true,
+      "description": "Lidero actualmente el desarrollo de esta plataforma B2B de seguros de viaje para una importante empresa de turismo de Bolivia. Stack NestJS + ReactJS, con IA aplicada en el proceso de desarrollo.",
+      "tags": ["NestJS", "ReactJS", "B2B", "IA"],
+      "links": {}
+    },
+    {
       "id": 1,
       "name": "Tu Municipio 24/7",
       "type": "government",
       "featured": true,
-      "description": "Plataforma del Registro Único para la Administración Tributaria para consultar deudas y pagos municipales por QR bancario. Arquitectura orientada a eventos con gRPC y MQTT.",
-      "tags": ["gRPC", "MQTT", "Microservicios", "NestJS"],
+      "description": "Lideré el equipo y diseñé la arquitectura orientada a eventos (gRPC, MQTT) de esta plataforma tributaria para consultar deudas y pagos municipales por QR bancario. +100.000 descargas.",
+      "tags": ["+100k descargas", "gRPC", "MQTT", "NestJS"],
       "links": {}
     },
     {
@@ -151,8 +172,8 @@
       "name": "Sistema de Información Administrativa (SIA)",
       "type": "government",
       "featured": true,
-      "description": "Sistema de RR.HH. para control de personal, vacaciones y registros, comunicado vía gRPC entre servicios.",
-      "tags": ["gRPC", "Backend", "PostgreSQL"],
+      "description": "Lideré el proyecto y definí todo el stack (NestJS, Angular) y la arquitectura. Sistema de RR.HH. para control de personal, vacaciones y registros, con comunicación gRPC entre servicios y librerías Angular reutilizables.",
+      "tags": ["NestJS", "Angular", "gRPC", "Librerías Angular"],
       "links": {}
     },
     {
@@ -189,6 +210,24 @@
       "featured": false,
       "description": "Plataforma para encontrar mascotas perdidas combinando publicación y escaneo de códigos QR.",
       "tags": ["Móvil", "QR", "Social"],
+      "links": {}
+    },
+    {
+      "id": 7,
+      "name": "Sistema de Pagos — Sindicato Litoral",
+      "type": "client",
+      "featured": false,
+      "description": "Lideré el proyecto: sistema de pagos para el Sindicato Litoral (La Paz, Bolivia) con NestJS y Angular, desplegado en AWS (EC2).",
+      "tags": ["NestJS", "Angular", "AWS / EC2"],
+      "links": {}
+    },
+    {
+      "id": 8,
+      "name": "Sistema de Inventarios",
+      "type": "client",
+      "featured": false,
+      "description": "Desarrollo de un sistema de inventarios a medida para un exportador boliviano independiente.",
+      "tags": ["Full-Stack", "Inventario"],
       "links": {}
     }
   ],

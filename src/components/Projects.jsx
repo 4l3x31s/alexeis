@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Landmark, Github, Smartphone, Rocket, Lightbulb, ExternalLink } from 'lucide-react';
+import { Landmark, Github, Smartphone, Rocket, Briefcase, Lightbulb, ExternalLink } from 'lucide-react';
 import { useContent } from '../hooks/useContent';
 
 export default function Projects() {
@@ -16,6 +16,8 @@ export default function Projects() {
         return <Smartphone size={24} />;
       case 'startup':
         return <Rocket size={24} />;
+      case 'client':
+        return <Briefcase size={24} />;
       default:
         return <Lightbulb size={24} />;
     }
@@ -31,6 +33,8 @@ export default function Projects() {
         return 'from-sky-500 to-cyan-500';
       case 'startup':
         return 'from-violet-500 to-purple-500';
+      case 'client':
+        return 'from-teal-500 to-emerald-600';
       default:
         return 'from-emerald-500 to-teal-500';
     }
