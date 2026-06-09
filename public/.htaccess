@@ -1,0 +1,41 @@
+# Apache config for the custom-domain deploy (https://alexeis.yvaganet.com).
+# Lives in public/ so Vite copies it into dist/ on every build.
+# GitHub Pages does not use Apache, so it is ignored there.
+
+# --- SPA fallback: serve index.html for any path that is not a real file/dir ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # Leave existing files and directories untouched (assets, favicon, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  # Everything else falls back to the SPA entry point
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# --- Correct MIME types (guards against the "text/html stylesheet" error) ---
+<IfModule mod_mime.c>
+  AddType text/css                    .css
+  AddType application/javascript      .js
+  AddType image/svg+xml               .svg
+  AddType application/json            .json
+  AddType image/webp                  .webp
+</IfModule>
+
+# --- Gzip compression for text assets ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- Long cache for hashed build assets (filenames change on every build) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css         "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml    "access plus 1 month"
+  ExpiresByType image/jpeg       "access plus 1 month"
+  ExpiresByType image/webp       "access plus 1 month"
+  # index.html must stay fresh so new deploys are picked up
+  ExpiresByType text/html        "access plus 0 seconds"
+</IfModule>
